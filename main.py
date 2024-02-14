@@ -1,7 +1,8 @@
 from flask import escape, jsonify, Request
 from bigquery_client import BigQueryClient
 from typing import Tuple
-
+import functions_framework
+@functions_framework.http
 def query_bigquery_data(request: Request) -> Tuple[str, int]:
     """
     Cloud Function to execute a query against Google BigQuery.
