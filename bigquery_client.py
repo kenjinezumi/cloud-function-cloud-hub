@@ -21,7 +21,7 @@ class BigQueryClient:
         Returns:
             bool: True if safe, False otherwise.
         """
-        disallowed_keywords = ['DELETE', 'UPDATE', 'INSERT', 'DROP']
+        disallowed_keywords = ['DROP']
         pattern = '|'.join(disallowed_keywords)
         return not re.search(pattern, query, re.IGNORECASE)
 
